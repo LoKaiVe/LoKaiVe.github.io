@@ -1,63 +1,62 @@
-/* Reset some default styles */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #ff66b2; /* 大粉色背景 */
-    font-family: Arial, sans-serif;
-}
-
-header {
-    text-align: center;
-    padding: 30px;
-    color: #fff; /* 白色文字 */
-}
-
-h1 {
-    font-size: 36px;
-}
-
-.main-content {
-    background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-}
-
-.intro, .confession, .pursuit {
-    margin-bottom: 30px;
-}
-
-.intro h2, .confession h2, .pursuit h2 {
-    color: #ff66b2; /* 大粉色标题 */
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 30px;
-    color: #fff; /* 白色文字 */
-}
-
-/* 添加动画效果，比如文本出现时淡入 */
+/* 添加动画效果，比如文本出现时淡入、旋转和缩放 */
 @keyframes fadeIn {
     0% {
         opacity: 0;
+        transform: scale(0.8) rotate(-10deg);
     }
     100% {
         opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* 添加旋转效果 */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 添加缩放效果 */
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
 .intro, .confession, .pursuit {
     animation: fadeIn 2s ease;
+}
+
+/* 应用旋转效果 */
+header h1 {
+    animation: rotate 5s linear infinite;
+}
+
+/* 应用缩放效果 */
+header p {
+    animation: scale 3s ease infinite alternate;
+}
+
+/* 鼠标悬停时添加更多动画效果 */
+.intro:hover, .confession:hover, .pursuit:hover {
+    animation: scale 1.1 0.5s ease;
+}
+
+/* 添加阴影效果，使文本浮起来 */
+.intro, .confession, .pursuit {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
 }
