@@ -12,7 +12,10 @@
 body {
     transform-origin: center center;
     animation: rotatePage 10s linear infinite;
+    background-color: #ff66b2; /* 大粉色背景 */
+    font-family: Arial, sans-serif;
 }
+
 
 
 /* 添加动画效果，比如文本出现时淡入、旋转和缩放 */
