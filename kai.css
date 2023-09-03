@@ -1,3 +1,20 @@
+/* 添加整体旋转效果 */
+@keyframes rotatePage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 将旋转中心点设置为窗口中心 */
+body {
+    transform-origin: center center;
+    animation: rotatePage 10s linear infinite;
+}
+
+
 /* 添加动画效果，比如文本出现时淡入、旋转和缩放 */
 @keyframes fadeIn {
     0% {
