@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Kaikai</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 添加闪烁效果 */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 应用闪烁效果到特定元素 */
+        .bling-bling {
+            animation: blink 1s ease infinite;
+        }
+
+        /* 添加背景动画 */
+        body {
+            background-image: linear-gradient(45deg, #ff66b2, #ffccff);
+            background-size: 200% 200%;
+            animation: gradientShift 10s infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="bling-bling">Love Kaikai</h1>
+        <p>For Chenkai Zhang</p>
+    </header>
+
+    <div class="main-content">
+        <div class="intro">
+            <h2>Dear Chenkai Zhang,</h2>
+            <p>You are the radiant star in my life, and I can't help but express my admiration for you.</p>
+            <p>Your charisma, your smile, and your presence illuminate my world like no one else.</p>
+            <p>From the moment I encountered you, I sensed there was something extraordinary about you.</p>
+        </div>
+        <div class="confession">
+            <h2>So, here it is...</h2>
+            <p>I can't contain my emotions any longer. I've fallen for you, wholeheartedly and completely.</p>
+            <p>Your kindness, your intellect, and your grace have captured my heart.</p>
+            <p>Chenkai Zhang, I want to be with you, to share my life with you, and to love you like no one else ever could.</p>
+        </div>
+        <div class="pursuit">
+            <h2>I make you this promise...</h2>
+            <p>I'll do whatever it takes to win your heart. I'll stand by you through thick and thin.</p>
+            <p>Together, we can craft a love story that will be the envy of the world.</p>
+            <p>Chenkai Zhang, will you be mine?</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Yours forever and always,</p>
+        <p>Your Secret Admirer</p>
+    </footer>
+</body>
+</html>
